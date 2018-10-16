@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Cinemad.gr</title>
+		<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" type="text/css" />
+		<style type="text/css">
+			html {}
+			body {padding:0;margin:0;font-size:16px;background:#000 url('img/dave_2560x1600.jpg') no-repeat 50% 50%;background-size:cover;font-family:"Questrial", sans-serif;color:#fff;width:100%;height:100vh;}
+			#bg {margin:0;padding:0;height:100vh;position:fixed;top:0;bottom:0;left:0;right:0;background:#000;opacity:0.6;z-index:1;}
+			section {padding:0;margin:0;position:fixed;top:40%;left:10%;right:0;z-index:2;text-align:left;}
+				h1 {padding:0;margin:0 0 20px 0;font-size:80px;line-height:80px;height:80px;}
+			aside {position:absolute;top:0;right:0;bottom:0;z-index:3;width:350px;padding:0;margin:0;}
+				.screen-flow {background-color:rgba(0, 0, 0, 0.6);padding-left:10px;}
+				.screen-flow:before {content:"";background:-moz-linear-gradient(top, black 10px, rgba(0, 0, 0, 0) 10px),-moz-linear-gradient(left, black 10px, rgba(0, 0, 0, 0) 10px);background:-webkit-linear-gradient(top, black 10px, rgba(0, 0, 0, 0) 10px),-webkit-linear-gradient(left, black 10px, rgba(0, 0, 0, 0) 10px);background-size:100% 20px;background-repeat:repeat-y;height:100%;width:20px;display:block;position:absolute;z-index:4;left:-20px;opacity:0.6;}
+					#fbLikePluginWrapper {width:340px;height:100vh;overflow:hidden;}
+		</style>
+		<!-- Force redirect to HTTPS -->
+		<script>if(!(window.location.host.startsWith("127.0.0.1") || window.location.host.startsWith("localhost")) && (window.location.protocol!="https:")) window.location.protocol="https:";</script>
+	</head>
+	<body>
+		<div id="bg"></div>
+		<section>
+			<h1>cinemad.gr</h1>
+			<p>...will return ;)</p>
+		</section>
+		<aside>
+			<div class="screen-flow">
+				<div id="fbLikePluginWrapper">
+					<iframe id="fbLikePlugin" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcinemad.gr%2F&tabs=timeline&small_header=true&width=342&height=800&adapt_container_width=true&hide_cover=false&show_facepile=false" width="342" height="" style="border:none;overflow:hidden;height:100vh;margin:-1px;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				</div>
+			</div>
+		</aside>
+
+		<script>
+			(function(window){
+				function init(){
+					var wHeight = window.innerHeight;
+					document.getElementById('fbLikePlugin').setAttribute('src','https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcinemad.gr%2F&tabs=timeline&small_header=true&width=342&height='+wHeight+'&adapt_container_width=true&hide_cover=false&show_facepile=false');
+				}
+				if (window.addEventListener) {
+					window.addEventListener("load", init, false);
+				} else if (window.attachEvent) {
+					window.attachEvent("onload", init);
+				} else {
+					window.onload = init;
+				}
+				window.onresize = init;
+			})(window);
+		</script>
+	</body>
+</html>
